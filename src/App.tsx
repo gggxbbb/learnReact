@@ -8,7 +8,9 @@ const appList = [
 
 function App() {
     const appElements = appList.map((app) => {
-        return PlaceHolder(app.name, app())
+        return <PlaceHolder name={app.name}>
+            {app()}
+        </PlaceHolder>
     })
     return (
         <div className="App">
@@ -17,7 +19,12 @@ function App() {
     )
 }
 
-function PlaceHolder(name: string, children: JSX.Element): JSX.Element {
+interface PlaceHolderProps {
+    name: string,
+    children: JSX.Element
+}
+
+function PlaceHolder({name, children}:PlaceHolderProps): JSX.Element {
     return (
         <div>
             <h1 id={name}>{name}</h1>
