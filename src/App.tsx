@@ -7,7 +7,7 @@ const appList = [
 ]
 
 function App() {
-    const appElements = appList.map((app, index) => {
+    const appElements = appList.map((app) => {
         return PlaceHolder(app.name, app())
     })
     return (
@@ -20,7 +20,7 @@ function App() {
 function PlaceHolder(name: string, children: JSX.Element): JSX.Element {
     return (
         <div>
-            <h1>{name}</h1>
+            <h1 id={name}>{name}</h1>
             <div className="placeholder">
                 {children}
             </div>
