@@ -17,6 +17,7 @@ function App01() {
             </h1>
             {MyP("This is a paragraph")}
             {MyP("This is a paragraph", 200)}
+            <p>不是组件</p>
             <hr/>
             <MyP2 count={count} onClick={handleClick}/>
             <MyP2 count={count} onClick={handleClick}/>
