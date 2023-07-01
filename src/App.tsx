@@ -1,9 +1,11 @@
 import React, {JSX} from 'react';
 import App01 from "./App01";
 import './App.css'
+import App02 from "./App02";
 
 const appList = [
-    App01
+    App01,
+    App02
 ]
 
 function App() {
